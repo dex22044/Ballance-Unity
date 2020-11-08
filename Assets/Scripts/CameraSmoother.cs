@@ -10,7 +10,7 @@ public class CameraSmoother : MonoBehaviour
     public float smoothLookSpeed;
     Vector3 targetLookPosSmooth;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         Vector3 targPosition = target.position;
         Vector3 smoothPos = Vector3.Lerp(transform.position, targPosition, smoothSpeed);
