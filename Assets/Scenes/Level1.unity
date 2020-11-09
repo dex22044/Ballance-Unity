@@ -1098,8 +1098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1050118406}
   targetLook: {fileID: 1659384252}
-  smoothSpeed: 0.025
-  smoothLookSpeed: 0.75
+  smoothSpeed: 0.125
+  smoothLookSpeed: 0.1
 --- !u!1001 &1419888129
 PrefabInstance:
   m_ObjectHideFlags: 0
