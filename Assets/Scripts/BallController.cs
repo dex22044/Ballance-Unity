@@ -33,6 +33,16 @@ public class BallController : MonoBehaviour
         cameraTarget.transform.rotation = Quaternion.Euler(0, cameraTarget.transform.eulerAngles.y, 0);
 
         bool isRotInput = Input.GetKey(KeyCode.LeftShift);
+        if (transform.position.y < -10)
+        {
+            Camera.main.GetComponent<CameraSmoother>().pausePosition = true;
+            Camera.main.GetComponent<CameraSmoother>().smoothLookSpeed = 1;
+        }
+        else
+        {
+            Camera.main.GetComponent<CameraSmoother>().pausePosition = false;
+            Camera.main.GetComponent<CameraSmoother>().smoothLookSpeed = 0.1f;
+        }
         if (currentDirection == 0)
         {
             if (Input.GetKey(KeyCode.W) && !isRotInput) rb.AddForce(Vector3.forward, ForceMode.Force);
